@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cẩm Nang Chinh Phục Kỳ Thi THPT: Lộ Trình 3 Năm Chiến Lược</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F8FF;
+            color: #002D62;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px;
+            }
+        }
+        .flowchart-node {
+            border: 2px solid #4682B4;
+            background-color: #FFFFFF;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .flowchart-node:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .flowchart-arrow {
+            font-size: 2rem;
+            color: #007FFF;
+            font-weight: bold;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -33px;
+            top: 0;
+            width: 25px;
+            height: 25px;
+            background-color: #007FFF;
+            border-radius: 50%;
+            border: 4px solid #FFFFFF;
+            z-index: 1;
+        }
+        .timeline-line {
+            position: absolute;
+            left: -22px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #ADD8E6;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+        
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#007FFF] to-[#002D62] mb-4">Cẩm Nang Chinh Phục Kỳ Thi THPT</h1>
+            <p class="text-lg md:text-xl text-[#4682B4]">Lộ trình 3 năm chiến lược từ xuất phát sớm đến thành công</p>
+        </header>
+
+        <section id="principles" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Bản Thiết Kế Của Kiến Trúc Sư Tri Thức</h2>
+            <p class="text-center max-w-3xl mx-auto mb-10">Thành công không phải là năng khiếu, mà là một hệ thống. Đây là 4 nguyên tắc cốt lõi để biến bạn từ một người học lo lắng thành một người học có chiến lược, thông minh và tự chủ.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="flowchart-node">
+                    <h3 class="font-bold text-xl mb-2">Pareto (80/20)</h3>
+                    <p class="text-sm">Tập trung vào 20% kiến thức cốt lõi mang lại 80% điểm số. Học sâu, không học dàn trải.</p>
+                </div>
+                <div class="flowchart-node">
+                    <h3 class="font-bold text-xl mb-2">Feynman</h3>
+                    <p class="text-sm">Giải thích một khái niệm bằng ngôn ngữ đơn giản nhất. Thấu hiểu thực sự, không học vẹt.</p>
+                </div>
+                <div class="flowchart-node">
+                    <h3 class="font-bold text-xl mb-2">Lặp Lại Ngắt Quãng</h3>
+                    <p class="text-sm">Ôn tập đúng lúc não bộ sắp quên để xây dựng trí nhớ dài hạn, bất bại.</p>
+                </div>
+                <div class="flowchart-node">
+                    <h3 class="font-bold text-xl mb-2">Truy Xuất Chủ Động</h3>
+                    <p class="text-sm">Nỗ lực gợi lại thông tin từ bộ nhớ thay vì đọc lại thụ động để củng cố kiến thức.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="roadmap" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-12">Lộ Trình 3 Năm: Từ Nền Móng Đến Nước Rút</h2>
+            <div class="relative pl-8">
+                <div class="timeline-line"></div>
+                <div class="timeline-item relative pb-12">
+                    <h3 class="text-2xl font-bold text-[#007FFF]">Giai Đoạn 1: Lớp 10 - Đặt Nền Móng Bất Bại</h3>
+                    <p class="mb-4">Mục tiêu là chiều sâu và sự nhất quán, không phải tốc độ. Xây dựng nền tảng vững chắc và thực hiện "Dự án Phục sinh Tiếng Anh".</p>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h4 class="font-bold text-lg mb-4">Dự Án "Phục Sinh Tiếng Anh" (6-9 Tháng)</h4>
+                        <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
+                            <div class="flowchart-node w-full md:w-auto">A1 (Nền tảng) <br> <span class="text-xs">Tháng 1-3</span></div>
+                            <div class="flowchart-arrow">↓</div>
+                            <div class="flowchart-node w-full md:w-auto">A2 (Mở rộng) <br> <span class="text-xs">Tháng 4-6</span></div>
+                            <div class="flowchart-arrow">↓</div>
+                            <div class="flowchart-node w-full md:w-auto">Sẵn sàng cho B1 <br> <span class="text-xs">Cuối lớp 10</span></div>
+                        </div>
+                        <p class="text-xs text-center mt-4">Tập trung vào ngữ pháp cốt lõi, từ vựng theo chủ đề và phát âm IPA chuẩn từ đầu.</p>
+                    </div>
+                </div>
+                <div class="timeline-item relative pb-12">
+                    <h3 class="text-2xl font-bold text-[#007FFF]">Giai Đoạn 2: Lớp 11 - Xây Dựng Tầng Cao</h3>
+                    <p class="mb-4">Năm học bản lề. Làm chủ kiến thức lớp 11 và bắt đầu các thói quen quan trọng: ghi nhật ký lỗi sai và luyện đề định kỳ.</p>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h4 class="font-bold text-lg mb-2">Tần Suất Luyện Đề Bắt Đầu Tăng</h4>
+                        <p class="text-sm mb-4">Mục tiêu của việc luyện đề ở giai đoạn này là để chẩn đoán lỗ hổng kiến thức và làm quen áp lực, không phải để đạt điểm cao.</p>
+                        <div class="chart-container h-64 max-h-72"><canvas id="practiceTestChart"></canvas></div>
+                    </div>
+                </div>
+                <div class="timeline-item relative">
+                    <h3 class="text-2xl font-bold text-[#007FFF]">Giai Đoạn 3: Lớp 12 - Cuộc Chạy Nước Rút Chiến Lược</h3>
+                    <p class="mb-4">Tích hợp và tối ưu hóa. Toàn bộ thời gian dành cho luyện đề chuyên sâu, tổng ôn và làm chủ định dạng đề thi mới.</p>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                         <h4 class="font-bold text-lg mb-2">Làm Chủ Định Dạng Đề Thi 2025</h4>
+                        <p class="text-sm mb-4">Đề thi mới đòi hỏi sự thấu hiểu sâu sắc thay vì học thuộc. Sự chuẩn bị kỹ lưỡng từ lớp 10 và 11 là lợi thế vượt trội.</p>
+                        <div class="chart-container"><canvas id="examFormatChart"></canvas></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mastery" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-12">Làm Chủ "Chiến Trường" Thi Cử</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="font-bold text-lg mb-2">Pareto trong Thực Tế: Phân Bổ Kiến Thức Vật Lý</h3>
+                    <p class="text-sm mb-4">Không phải mọi chương đều có giá trị điểm số như nhau. Phân tích ma trận đề thi cho thấy các chuyên đề trọng tâm cần được ưu tiên tuyệt đối.</p>
+                    <div class="chart-container"><canvas id="paretoChart"></canvas></div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="font-bold text-lg mb-2">Cuộc Chiến Với Sự Lãng Quên</h3>
+                    <p class="text-sm mb-4">Não bộ tự nhiên sẽ quên. Lặp lại ngắt quãng là kỹ thuật khoa học giúp bạn "hack" lại đường cong quên lãng, biến kiến thức thành trí nhớ dài hạn.</p>
+                    <div class="chart-container"><canvas id="forgettingCurveChart"></canvas></div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="arsenal" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-12">Kho Vũ Khí Tối Thượng Của Bạn</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="font-bold text-lg mb-2">"Giáo Án Của Gymer": Thời Gian Biểu Mẫu</h3>
+                    <p class="text-sm mb-4">Một lịch trình chi tiết giúp loại bỏ việc phải ra quyết định liên tục, giải phóng năng lượng tinh thần để tập trung vào việc học.</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center bg-blue-50 p-2 rounded-md"><span class="font-bold w-28">05:15 - 06:30:</span><span>📚 Học Khối 1 (Học thuộc lòng, Tiếng Anh)</span></div>
+                        <div class="flex items-center bg-green-50 p-2 rounded-md"><span class="font-bold w-28">14:00 - 17:00:</span><span>🧠 Học Khối 2 (Chuyên đề mới, bài tập khó)</span></div>
+                        <div class="flex items-center bg-yellow-50 p-2 rounded-md"><span class="font-bold w-28">17:00 - 18:00:</span><span>🏃‍♂️ Vận động thể chất, giải tỏa căng thẳng</span></div>
+                        <div class="flex items-center bg-purple-50 p-2 rounded-md"><span class="font-bold w-28">19:30 - 22:00:</span><span>✍️ Học Khối 3 (Luyện đề, làm bài tập)</span></div>
+                        <div class="flex items-center bg-red-50 p-2 rounded-md"><span class="font-bold w-28">22:30:</span><span>🌙 Đi ngủ (Đảm bảo 7-9 tiếng)</span></div>
+                    </div>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="font-bold text-lg mb-2">Bộ Công Cụ Số Chiến Lược</h3>
+                    <p class="text-sm mb-4">Biến công nghệ từ kẻ thù thành đồng minh. Chủ động thiết lập một môi trường số hỗ trợ cho việc học tập trung.</p>
+                     <ul class="space-y-3">
+                        <li class="flex items-start"><span class="text-2xl mr-3">🧠</span><div><span class="font-bold">Notion:</span> Xây dựng "Bộ não thứ hai", quản lý tri thức.</div></li>
+                        <li class="flex items-start"><span class="text-2xl mr-3">🃏</span><div><span class="font-bold">Anki:</span> Học công thức, từ vựng bằng Lặp lại ngắt quãng.</div></li>
+                        <li class="flex items-start"><span class="text-2xl mr-3">🌳</span><div><span class="font-bold">Forest:</span> Gamify việc tập trung, chống sao nhãng từ điện thoại.</div></li>
+                        <li class="flex items-start"><span class="text-2xl mr-3">🛡️</span><div><span class="font-bold">BlockSite:</span> Tự động chặn các trang web gây xao nhãng trong giờ học.</div></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center mt-12 pt-8 border-t border-[#ADD8E6]">
+            <p class="text-[#4682B4]">Hành trình 3 năm phía trước là một cuộc thi marathon đầy thử thách nhưng cũng vô cùng xứng đáng. <br>Đây không chỉ là hành trình để chinh phục một kỳ thi, mà còn là hành trình để phát huy tối đa tiềm năng của bản thân.</p>
+            <p class="text-xs mt-4 text-[#007FFF]">© 2025 - Infographic được tạo bởi Canvas Infographics. Neither Mermaid JS nor SVG were used in this output.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const primaryColor = '#007FFF';
+            const secondaryColor = '#4682B4';
+            const lightColor = '#ADD8E6';
+            const textColor = '#002D62';
+
+            const tooltipConfig = {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                  return label.join(' ');
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            };
+
+            function wrapLabels(label, maxLength) {
+                if (label.length <= maxLength) {
+                    return label;
+                }
+                const words = label.split(' ');
+                let lines = [];
+                let currentLine = '';
+                for (const word of words) {
+                    if ((currentLine + ' ' + word).trim().length > maxLength) {
+                        lines.push(currentLine.trim());
+                        currentLine = word;
+                    } else {
+                        currentLine += ' ' + word;
+                    }
+                }
+                lines.push(currentLine.trim());
+                return lines.map(line => line.trim()).filter(line => line.length > 0);
+            }
+
+            const examFormatCtx = document.getElementById('examFormatChart');
+            if(examFormatCtx) {
+                new Chart(examFormatCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Trắc nghiệm nhiều lựa chọn', 'Trắc nghiệm Đúng/Sai', 'Trắc nghiệm trả lời ngắn'],
+                        datasets: [{
+                            label: 'Phân Bổ Dạng Câu Hỏi',
+                            data: [60, 20, 20],
+                            backgroundColor: [primaryColor, secondaryColor, lightColor],
+                            borderColor: '#FFFFFF',
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                           ...tooltipConfig.plugins,
+                            legend: {
+                                position: 'top',
+                                labels: { color: textColor }
+                            },
+                            title: {
+                                display: false
+                            }
+                        }
+                    }
+                });
+            }
+            
+            const practiceTestCtx = document.getElementById('practiceTestChart');
+            if (practiceTestCtx) {
+                new Chart(practiceTestCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Kỳ II Lớp 11', 'Tháng 1-4 Lớp 12', 'Tháng 5-6 Lớp 12'],
+                        datasets: [{
+                            label: 'Số đề/tuần',
+                            data: [0.5, 2, 4],
+                            fill: true,
+                            backgroundColor: 'rgba(0, 127, 255, 0.2)',
+                            borderColor: primaryColor,
+                            tension: 0.4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: { beginAtZero: true, ticks: { color: textColor }, grid: { color: 'rgba(70, 130, 180, 0.1)'} },
+                            x: { ticks: { color: textColor }, grid: { color: 'rgba(70, 130, 180, 0.1)'} }
+                        },
+                         plugins: {
+                           ...tooltipConfig.plugins,
+                            legend: {
+                                display: false
+                            }
+                        }
+                    }
+                });
+            }
+
+            const paretoCtx = document.getElementById('paretoChart');
+            if (paretoCtx) {
+                const rawLabels = ['Dao động cơ', 'Sóng cơ và Sóng âm', 'Dòng điện xoay chiều', 'Sóng ánh sáng', 'Lượng tử ánh sáng', 'Các chuyên đề khác'];
+                const wrappedLabels = rawLabels.map(label => wrapLabels(label, 16));
+
+                new Chart(paretoCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: wrappedLabels,
+                        datasets: [{
+                            label: 'Tỷ trọng điểm số (ước tính)',
+                            data: [22.5, 17.5, 20, 12.5, 10, 17.5],
+                            backgroundColor: [primaryColor, secondaryColor, primaryColor, secondaryColor, primaryColor, lightColor],
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'y',
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            x: { beginAtZero: true, ticks: { color: textColor }, grid: { color: 'rgba(70, 130, 180, 0.1)'} },
+                            y: { ticks: { color: textColor }, grid: { display: false } }
+                        },
+                        plugins: {
+                           ...tooltipConfig.plugins,
+                            legend: { display: false }
+                        }
+                    }
+                });
+            }
+
+            const forgettingCurveCtx = document.getElementById('forgettingCurveChart');
+            if (forgettingCurveCtx) {
+                new Chart(forgettingCurveCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Ngày 1', 'Ngày 2', 'Ngày 7', 'Ngày 14', 'Ngày 30'],
+                        datasets: [
+                            {
+                                label: 'Học thông thường',
+                                data: [100, 50, 25, 15, 5],
+                                borderColor: secondaryColor,
+                                backgroundColor: 'rgba(70, 130, 180, 0.2)',
+                                fill: true,
+                                tension: 0.2
+                            },
+                            {
+                                label: 'Lặp lại ngắt quãng',
+                                data: [100, 98, 95, 92, 90],
+                                borderColor: primaryColor,
+                                backgroundColor: 'rgba(0, 127, 255, 0.2)',
+                                fill: true,
+                                tension: 0.2
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: { 
+                                beginAtZero: true, 
+                                max: 100,
+                                ticks: {
+                                    callback: function(value) { return value + '%'; },
+                                    color: textColor
+                                },
+                                grid: { color: 'rgba(70, 130, 180, 0.1)'}
+                            },
+                             x: { ticks: { color: textColor }, grid: { color: 'rgba(70, 130, 180, 0.1)'} }
+                        },
+                        plugins: {
+                           ...tooltipConfig.plugins,
+                            legend: {
+                                position: 'bottom',
+                                labels: { color: textColor }
+                            },
+                             title: {
+                                display: true,
+                                text: 'Tỷ lệ ghi nhớ kiến thức (%)',
+                                color: textColor
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
